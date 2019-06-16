@@ -10,7 +10,6 @@ class Dashboard extends Component {
             
             <Text>This is Dashboard</Text>
             
-            
             <Button color='#454543' title={"register"} onPress={_ =>this.props.navigation.navigate('UserReg')} />
         </View>
         )
