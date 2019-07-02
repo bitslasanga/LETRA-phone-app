@@ -19,7 +19,7 @@ export default StyleSheet.create({
     parent: {
         flex: 1,
         justifyContent: 'center', 
-        backgroundColor: '#EEEEE1'
+        backgroundColor: '#FEFEFF'
     },
     loginContainer:{
         alignItems: 'center',

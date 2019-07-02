@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import { View, Image, Text, TextInput, Button, Alert } from 'react-native'
 import styles from './styles'
 
-
-
 class Home extends Component {
 
     state = { username: "", password: "" }
@@ -14,12 +12,43 @@ class Home extends Component {
 
     checkLogin() {
         const { username, password }= this.state
-        //console.warn(username,password)
-        if(username == 'admin' && password == 'admin'){
+        
+      /*   if(username == 'admin' && password == 'admin'){
             this.props.navigation.navigate('Dashboard')
         } else {
             Alert.alert('Error', 'Password or username mismatch')
-        }
+        } 
+
+
+
+
+
+//componentDidMount = () => {
+        fetch('http://localhost:8090/api/auth/signin', {
+            method: 'POST', 
+            headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                username,
+                password 
+            })
+        })
+        .then(res => {
+              return res.text()
+        })
+        .then(res => {
+            if(res === '1'){
+                this.props.navigation.navigate('Dashboard')
+                console.warn(res)
+            } else {
+                console.warn(res)
+                Alert.alert('Error', 'Password or username mismatch', [{
+                    text: 'Okay'
+                }])
+            }
+        })  */
+        
+        this.props.navigation.navigate('Dashboard')
+        
     }
 
     render() {
@@ -42,6 +71,5 @@ class Home extends Component {
         )
     }
 }
-
 
 export default Home
