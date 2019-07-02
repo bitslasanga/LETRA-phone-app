@@ -5,7 +5,7 @@ export default StyleSheet.create({
     heading: {
         fontSize: 35,
         textAlign: 'center',
-        color: '#000003'
+        color: '#000000'
     },
     input: {
         fontSize: 25,

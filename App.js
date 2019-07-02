@@ -28,14 +28,13 @@ Tab: {
     navigationOptions:{tabBarVisible: false}
   }
  
-
 } ); 
 
 export default class App extends Component {
 
   render() {
       return (
-                  <TabNavigator />   
+         <TabNavigator />   
       )
   }
 }
